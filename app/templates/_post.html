@@ -1,0 +1,19 @@
+    <table class="table table-hover" border="1">
+        <tr>
+            <td>
+                 <p> {{ post.author.username }} says, <b>{{ post.timestamp }}</b></p>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            {{ post.body }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <a href="{{ url_for('showpost', postid=post.id) }}">show</a> <a href="{{ url_for('editpost', postid=post.id) }}">edit</a>
+            </td>
+        </tr>
+
+    </table>
